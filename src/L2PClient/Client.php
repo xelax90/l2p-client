@@ -98,7 +98,7 @@ class Client {
 		}
 		$params['accessToken'] = $accessToken->getAccessToken();
 		$url = $this->getConfig()->getApiUrl().$endpoint;
-		if($method == 'GET'){
+		if(!$isPost){
 			$url .= '?'.http_build_query($params);
 		}
 		$ch = curl_init($url);
