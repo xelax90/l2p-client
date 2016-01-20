@@ -33,8 +33,11 @@ if($token === null){
 }
 ```
 
-After the verification is done, the next call to ```getAccessToken``` will return an ```L2PClient\Token\AccessToken```. From now on you can use the ```request``` function to access the API:
+After the verification is done, the next call to ```getAccessToken``` will return an ```L2PClient\Token\AccessToken```. 
 
+### Calling the API
+
+After you successfully recieved an AccessToken, you can use the ```request``` function to access the API:
 
 ```
 var_dump($client->request('viewAllCourseInfo'));
