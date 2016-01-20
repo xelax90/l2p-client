@@ -1,0 +1,7 @@
+._*
+.~lock.*
+.DS_Store
+
+*.swl
+*~.nib
+*.orig
