@@ -1,0 +1,15 @@
+{
+    "name": "xelax90/l2p-client",
+    "description": "Simple L2P API Client",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Aleksandr",
+            "email": "schurix@gmx.de"
+        }
+    ],
+    "require": {
+				"ext-curl" : "*",
+    }
+}
