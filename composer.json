@@ -12,4 +12,9 @@
     "require": {
 				"ext-curl" : "*"
     }
+		"autoload" : {
+				"psr-0": {
+						"L2pClient\\" : "src/"
+				}
+		}
 }
