@@ -206,7 +206,6 @@ class TokenManager {
 	protected function sendPostRequest($path, $params){
 		$url = $this->getConfig()->getAuthUrl().$path;
 		$ch = curl_init($url);
-		var_dump($params);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
