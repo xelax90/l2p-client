@@ -58,9 +58,18 @@ class Config {
 	 */
 	protected $apiUrl = 'https://www3.elearning.rwth-aachen.de/_vti_bin/l2pservices/api.svc/v1/';
 	
-	public function __construct(StorageInterface $storage, $clientId) {
+	public function __construct(StorageInterface $storage, $clientId, $authUrl = null, $apiUrl = null, $scope = null) {
 		$this->setStorage($storage);
 		$this->setClientId($clientId);
+		if($authUrl !== null){
+			$this->setAuthUrl($authUrl);
+		}
+		if($apiUrl !== null){
+			$this->setApiUrl($apiUrl);
+		}
+		if($scope !== null){
+			$this->setScope($scope);
+		}
 	}
 	
 	/**
