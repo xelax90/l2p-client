@@ -30,14 +30,46 @@ use JsonSerializable;
 class Token implements JsonSerializable{
 	
 	/**
+	 * Just some ID that can be passed to reidentify the token
+	 * @var int
+	 */
+	protected $id;
+	
+	/**
+	 * Id of the user owning this token.
+	 * @var int
+	 */
+	protected $userId;
+	
+	/**
 	 * @var DateTime
 	 */
 	protected $issueTime;
 	
-	public function __construct(DateTime $issueTime) {
-		$this->issueTime = $issueTime;
+	public function __construct(DateTime $issueTime, $id = null, $userId = null) {
+		$this->setIssueTime($issueTime);
+		$this->setId($id);
+		$this->setUserId($userId);
 	}
 	
+	public function getId() {
+		return $this->id;
+	}
+
+	public function setId($id) {
+		$this->id = $id;
+		return $this;
+	}
+	
+	public function getUserId() {
+		return $this->userId;
+	}
+
+	public function setUserId($userId) {
+		$this->userId = $userId;
+		return $this;
+	}
+
 	/**
 	 * @return DateTime
 	 */
